@@ -64,6 +64,10 @@ function mergeTemplate(capturedImage) {
 
         // Draw the captured image to fit in the polaroid frame
         outputContext.drawImage(capturedImage, polaroidX, polaroidY, polaroidWidth, polaroidHeight);
+
+        // Show the save button after merging
+        const saveButton = document.getElementById('saveButton');
+        saveButton.style.display = 'block';
     };
 }
 

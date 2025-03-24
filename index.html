@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photobooth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Select Your Template</h1>
+    <div class="template-container">
+        <img class="template" src="assets/images/pic1.jpeg" alt="Template 1" onclick="selectTemplate(this)">
+        <img class="template" src="assets/images/pic2.jpeg" alt="Template 2" onclick="selectTemplate(this)">
+        <img class="template" src="assets/images/pic3.jpeg" alt="Template 3" onclick="selectTemplate(this)">
+        <img class="template" src="assets/images/pic4.jpeg" alt="Template 4" onclick="selectTemplate(this)">
+        <img class="template" src="assets/images/pic5.jpeg" alt="Template 5" onclick="selectTemplate(this)">
+        <img class="template" src="assets/images/pic6.jpeg" alt="Template 6" onclick="selectTemplate(this)">
+        <img class="template" src="assets/images/pic7.jpeg" alt="Template 7" onclick="selectTemplate(this)">
+        <img class="template" src="assets/images/pic8.jpeg" alt="Template 8" onclick="selectTemplate(this)">
+        <img class="template" src="assets/images/pic9.jpeg" alt="Template 9" onclick="selectTemplate(this)">
+        <img class="template" src="assets/images/pic10.jpeg" alt="Template 10" onclick="selectTemplate(this)">
+    </div>
+
+    <div class="upload-container">
+        <input type="file" id="imageUpload" accept="image/*" onchange="uploadImage(event)">
+        <button class="btn" onclick="startCamera()">Open Camera</button>
+        <video id="camera" autoplay></video>
+        <button class="btn" id="captureButton" onclick="captureImage()">Click</button>
+        <canvas id="canvas" style="display:none;"></canvas>
+    </div>
+
+    <div class="preview">
+        <h2>Preview</h2>
+        <div id="output">
+            <canvas id="outputCanvas"></canvas>
+        </div>
+        <button class="btn" id="saveButton" onclick="saveImage()">Save Image</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
